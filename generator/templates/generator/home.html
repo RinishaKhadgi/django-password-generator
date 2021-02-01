@@ -1,0 +1,35 @@
+{% extends 'generator/base.html' %}
+{% block content %}
+<h2 class="text-danger mb-5">Password Generator</h2>
+
+<form method="GET" action="{% url 'password' %}">
+    <div class="form-group mb-2">
+        <select name="length" id="passwordLength">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9" selected>9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <label for="passwordLength" class="form-label"> Length</label>
+    </div>
+    <div class="mb-2">
+        <input type="checkbox" id="upperCase" name="uppercase">
+        <label class="form-check-label" for="upperCase">Uppercase</label>
+    </div>
+    <div class="mb-2">
+        <input type="checkbox" id="numbers" name="numbers">
+        <label class="form-check-label" for="numbers">Numbers</label>
+    </div>
+    <div class="mb-2">
+        <input type="checkbox" id="special" name="special">
+        <label class="form-check-label" for="special">Special</label>
+    </div>
+    <div class="mb-2 mt-5">
+        <button type="submit" class="btn btn-danger">Generate</button>
+    </div>
+</form>
+
+{% endblock %}
