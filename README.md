@@ -1,1 +1,1 @@
-This app creates passwords according to user's preferences!
+Creates passwords according to user's preference!
